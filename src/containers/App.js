@@ -21,7 +21,6 @@ const mapDispatchStateToProps = (dispatch) => {
     onRequestRobots : () => dispatch(requestRobots())
   }
 }
-//requestRobots
 
 class App extends Component {
 
