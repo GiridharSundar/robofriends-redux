@@ -5,7 +5,7 @@ import {createStore ,applyMiddleware,combineReducers} from 'redux';
 import thunkMiddleware from 'redux-thunk'
 import {createLogger} from 'redux-logger'; 
 import App from './containers/App';
-import registerServiceWorker from './registerServiceWorker';
+import * as serviceWorker from './serviceWorker';
 import {searchRobots, requestRobots} from './reducer'
 import './index.css';
 import 'tachyons'; 
@@ -20,4 +20,5 @@ ReactDOM.render(
 		<App />
 	</Provider>
 	, document.getElementById('root'));
-registerServiceWorker();
+
+serviceWorker.register();
